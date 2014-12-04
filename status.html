@@ -3,10 +3,13 @@
 
 <script>
 $("button").click(function(){
-  $.getJSON("demo_ajax_json.js",function(result){
-    $.each(result, function(i, field){
-      $("div").append(field + " ");
-    });
+  $.getJSON("http://lighthouse.starquake.co/api/apps",function(result){
+    console.log("click button.");
+    console.log(result);
+    
+    // $.each(result, function(i, field){
+    //   $("div").append(field + " ");
+    // });
   });
 });
 </script>
